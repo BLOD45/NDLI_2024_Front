@@ -12,6 +12,7 @@
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "esModuleInterop": true,
+    "noImplicitAny": false,
     "moduleDetection": "force",
     "noEmit": true,
     "jsx": "react-jsx",
