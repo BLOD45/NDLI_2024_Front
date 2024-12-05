@@ -1,19 +1,14 @@
-import React, { useState } from 'react';
-import TopBar from "./components/TopBar";
+import React from 'react';
+import AppButtons from './components/AppButtons/AppButtons';
 import './App.css';
 
-function App() {
-  const [mode, setMode] = useState(false);
-
-  const toogleChangeMode = () => {
-    setMode((prevMode) => !prevMode);
-  }
+const App: React.FC = () => {
 
   return (
     <>
-      
+      <AppButtons />
     </>
-  )
-}
+  );
+};
 
 export default App
