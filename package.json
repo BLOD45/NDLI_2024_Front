@@ -16,8 +16,10 @@
     "@vitejs/plugin-react": "^4.3.4",
     "dotenv": "^16.4.5",
     "globals": "^15.12.0",
+    "konva": "^9.3.16",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-konva": "^18.2.10",
     "serve": "^14.2.4",
     "typescript": "~5.6.2",
     "vite": "^6.0.1"
