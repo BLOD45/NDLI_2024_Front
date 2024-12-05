@@ -4,139 +4,133 @@ import Box from '@mui/material/Box';
 import ButtonBase from '@mui/material/ButtonBase';
 import Typography from '@mui/material/Typography';
 import CaptchaImage from '../../assets/images/buttons/Captcha.jpg';
-import OceanImage from '../../assets/images/buttons/Ocean.jpg';
+import OceanImage from '../../assets/images/buttons/Ocean.png';
+import oceanVideo from '../../assets/videos/background/bubbles.mp4';
+import zIndex from '@mui/material/styles/zIndex';
 
 const images = [
   {
     url: CaptchaImage,
-    title: 'Captcha',
-    width: '50%',
+    title: 'Jouer au Cookie Clicker',
   },
   {
     url: OceanImage,
-    title: 'Ocean',
-    width: '50%',
+    title: 'Découvrir les océans',
   },
 ];
 
-const ImageButton = styled(ButtonBase)(({ theme }) => ({
+const ImageButton = styled(ButtonBase)({
   position: 'relative',
-  height: 200,
-  [theme.breakpoints.down('sm')]: {
-    width: '100% !important',
-    height: 100,
+  height: 200, // Increased size
+  width: 200, // Increased size
+  borderRadius: '16px', // Rounded corners
+  overflow: 'hidden',
+  boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.3)',
+  transition: 'box-shadow 0.3s ease', // Smooth transition for shadow and scaling
+  '&:hover': {
+    boxShadow: '0px 6px 30px rgba(0, 0, 0, 0.4)', // Shadow becomes stronger on hover
   },
-  '&:hover, &.Mui-focusVisible': {
-    zIndex: 1,
-    '& .MuiImageBackdrop-root': {
-      opacity: 0.15,
-    },
-    '& .MuiImageMarked-root': {
-      opacity: 0,
-    },
-    '& .MuiTypography-root': {
-      border: '4px solid currentColor',
-    },
-  },
-}));
+});
 
 const ImageSrc = styled('span')({
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    top: 0,
-    bottom: 0,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center 40%',
-  });
+  position: 'absolute',
+  left: 0,
+  right: 0,
+  top: 0,
+  bottom: 0,
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  transition: 'transform 0.5s ease-in-out',
+  '&:hover': {
+    transform: 'scale(1.1)', // Background image zoom effect
+  },
+});
 
-  const Image = styled('span')(({ theme }) => ({
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    top: 0,
-    bottom: 0,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    color: theme.palette.common.white,
-  }));
-  
-  const ImageBackdrop = styled('span')(({ theme }) => ({
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    top: 0,
-    bottom: 0,
-    backgroundColor: theme.palette.common.black,
-    opacity: 0.4,
-    transition: theme.transitions.create('opacity'),
-  }));
+const AppButtons: React.FC = () => {
+  return (
+    <>
+    <Box
+      sx={{
+        display: 'flex',
+        justifyContent: 'center', // Center horizontally
+        alignItems: 'center', // Center vertically
+        height: '100vh', // Full height of the viewport
+        width: '100vw',
+        background: 'linear-gradient(to bottom, #004e92, #000428)', // Ocean-style gradient
+      }}
+    >
+      <Box
+        component="video"
+        src={oceanVideo} // Votre vidéo de fond
+        autoPlay
+        loop
+        muted
+        playsInline
+        sx={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          zIndex: 0, // Assure que la vidéo soit en arrière-plan
+        }}
+      />
 
-  const ImageMarked = styled('span')(({ theme }) => ({
-    height: 3,
-    width: 18,
-    backgroundColor: theme.palette.common.white,
-    position: 'absolute',
-    bottom: -2,
-    left: 'calc(50% - 9px)',
-    transition: theme.transitions.create('opacity'),
-  }));
+        <Box
+          sx={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            background: 'rgba(0, 0, 0, 0.4)', // Semi-transparent black
+            zIndex: 0, // Ensure overlay is above the video
+          }}
+        />
 
-  const AppButtons: React.FC = () => {
-    return (
       <Box
         sx={{
-            display: 'flex',
-            justifyContent: 'center', // Center horizontally
-            alignItems: 'center', // Center vertically
-            height: '100vh', // Full height of the viewport
-            width: '100vw',
+          display: 'flex',
+          justifyContent: 'space-between', // Align images
+          alignItems: 'center',
+          width: '50vw', // Adjust width
+          padding: '16px',
         }}
       >
-        <Box 
-            sx={{
-            display: 'flex',
-            justifyContent: 'space-between', // Align images to the edges
-            alignItems: 'center', // Vertically center the images
-            width: '50vw', // Half the screen width
-            height: 200,
-            margin: '0 auto', // Center the Box horizontally
-            padding: '16px', // Add some padding
-            }}
-        >
         {images.map((image) => (
-            <ImageButton
-            focusRipple
+          <Box
             key={image.title}
-            style={{
-                width: '45%',
+            sx={{
+              display: 'flex',
+              flexDirection: 'column', // Stack items vertically
+              alignItems: 'center', // Center horizontally
+              textAlign: 'center',
+              gap: '8px', // Space between image and text
             }}
-            >
-            <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
-            <ImageBackdrop className="MuiImageBackdrop-root" />
-            <Image>
-                <Typography
-                component="span"
-                variant="subtitle1"
-                color="inherit"
-                sx={(theme) => ({
-                    position: 'relative',
-                    p: 4,
-                    pt: 2,
-                    pb: `calc(${theme.spacing(1)} + 6px)`,
-                })}
-                >
-                {image.title}
-                <ImageMarked className="MuiImageMarked-root" />
-                </Typography>
-            </Image>
+          >
+            <ImageButton>
+              <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
             </ImageButton>
+            <Typography
+              variant="h6"
+              color="white"
+              sx={{
+                fontSize: '1.2rem',
+                fontWeight: 'bold',
+                textTransform: 'uppercase',
+                zIndex: 1,
+                textShadow: '0px 4px 8px rgba(0, 0, 0, 0.5)',
+              }}
+            >
+              {image.title}
+            </Typography>
+          </Box>
         ))}
-        </Box>
       </Box>
-      
-    );
-  };
+    </Box>
+    </>
+  );
+};
 
-  export default AppButtons;
+export default AppButtons;
