@@ -1,0 +1,13 @@
+.clicker-zone {
+    position: relative;
+    width: 100%;
+    height: 96%;
+}
+
+.clicker-image {
+    position: absolute;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    transition: transform 0.3s ease;
+}
