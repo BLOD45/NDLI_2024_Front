@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    height: 90vh;
+    width: 95vw;
+    margin: 0; /* Ensure no margin around the container */
+    padding: 0; /* Ensure no padding around the container */
+    transform: translateX(-15%); /* Move the container 90px to the left */
+}
+
+.shop {
+    background-color: #817c7c;
+    padding: 0; /* Remove padding to fill the space completely */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 20%; /* Ensure the shop takes up 20% of the width */
+    height: 100%; /* Ensure the shop fills the entire height */
+}
+
+.clicker-zone {
+    position: relative;
+    background-color: #3f3030;
+    padding: 1rem;
+    overflow: clip;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%; /* Ensure the clicker zone takes up 80% of the width */
+}
