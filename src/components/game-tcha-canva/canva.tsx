@@ -69,10 +69,6 @@ const fishnetingCaptcha: React.FC = () => {
     >
       {!isSuccess ? (
         <>
-          <div style={{ height: "100px", textAlign: "center" }}>
-            <h3>🎣 Remonte les déchets !</h3>
-          </div>
-
           {/* Canevas pour le jeu */}
             <Stage width={window.innerWidth * 0.8} height={500}>
             <Layer>
@@ -113,14 +109,11 @@ const fishnetingCaptcha: React.FC = () => {
               )}
             </Layer>
           </Stage>
-
-          <div style={{ height: "200px", textAlign: "center" }}>
-            <h4>Continuez à scroller vers le haut pour remonter les déchets !</h4>
-          </div>
         </>
       ) : (
         <div style={{ textAlign: "center", marginTop: "50px" }}>
           <h2>✅ Déchets remontés avec succès ! Bien joué !</h2>
+          <h3>Tu pouvais aussi juste cliquer sur les déchets pour les ramasser !</h3>
         </div>
       )}
     </div>
