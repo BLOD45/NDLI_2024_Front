@@ -1,11 +1,18 @@
 import React, { useState, useEffect } from "react";
-import { Stage, Layer, Line, Circle } from "react-konva";
+import { Stage, Layer, Line, Image } from "react-konva";
 
-const FishingCaptcha: React.FC = () => {
-  const maxScroll = 400; // Distance totale à scroller
-  const [virtualScrollY, setVirtualScrollY] = useState(maxScroll); // Poisson commence en bas
+
+const fishnetingCaptcha: React.FC = () => {
+  const maxScroll = 400;
+  const [virtualScrollY, setVirtualScrollY] = useState(maxScroll); 
   const [isSuccess, setIsSuccess] = useState(false); // Validation du CAPTCHA
   const [speed, setspeed] = useState(2);
+
+  const fishnetImage = React.useRef<HTMLImageElement | null>(null);
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  const image = new window.Image();
+  image.src = "./filet-dechet.png";
 
 
 useEffect(() => {
@@ -17,44 +24,45 @@ useEffect(() => {
   }, 50);
 
   return () => clearInterval(interval);
-}, [isSuccess]);
+}, [speed,isSuccess]);
 
 useEffect(() => {
   const speedInterval = setInterval(() => {
-    const speedOptions = [];
-    const newSpeed = Math.random() * 4 +1; // Génère un vitesse entre 1 et 5
+    const speedOptions = [3, 5, 10, 3, 5, 10, 3, 5, 15];
+    const newSpeed = speedOptions[Math.floor(Math.random() * speedOptions.length)]
     setspeed(newSpeed);
-  }, 2000);
+  },1000);
 
   return () => clearInterval(speedInterval);
 }, []);
+
+
 
   // Gestionnaire de la molette pour simuler le scroll
   const handleWheel = (e: React.WheelEvent) => {
     e.preventDefault(); // Empêche le défilement réel
 
     setVirtualScrollY((prev) => {
-      const newScrollY = prev - e.deltaY * 0.08; // Réduire pour remonter
+      const newScrollY = prev - e.deltaY * 0.08; // Sensibilité du scroll
       return Math.max(0, Math.min(newScrollY, maxScroll)); // Limiter entre 0 et maxScroll
     });
   };
 
-  // Vérifier si le poisson est remonté au sommet
   useEffect(() => {
     if (virtualScrollY <= 0) {
-      setIsSuccess(true); // Valider le CAPTCHA
+      setIsSuccess(true); 
     }
   }, [virtualScrollY]);
 
   return (
     <div
-      style={{ height: "100vh", overflow: "hidden" }} // Empêche le défilement réel
-      onWheel={handleWheel} // Intercepte les événements de la molette
+      style={{ height: "100vh", overflow: "hidden" }}
+      onWheel={handleWheel} 
     >
       {!isSuccess ? (
         <>
           <div style={{ height: "100px", textAlign: "center" }}>
-            <h3>🎣 Faites défiler vers le haut pour remonter le poisson !</h3>
+            <h3>🎣 Remonte les déchets !</h3>
           </div>
 
           {/* Canevas pour le jeu */}
@@ -62,17 +70,22 @@ useEffect(() => {
             <Layer>
               {/* Ligne de pêche */}
               <Line
-                points={[250, 0, 250, virtualScrollY]} // Ligne commence en bas et suit le poisson
+                points={[250, 0, 250, virtualScrollY]} 
                 stroke="black"
                 strokeWidth={2}
               />
-              {/* Poisson attaché à l'hameçon */}
-              <Circle
-                x={250}
-                y={virtualScrollY} // Le poisson suit la ligne
-                radius={20}
-                fill="blue"
-              />
+
+              {/* Filet attaché au fil */}
+              {imageLoaded && (
+                <KonvaImage
+                  x={225}
+                  y={virtualScrollY}
+                  width={50}
+                  height={50}
+                  image={fishnetImage.current || undefined}
+                  onClick={() => (window.location.href = "/")}
+                />
+              )}
             </Layer>
           </Stage>
 
@@ -82,11 +95,11 @@ useEffect(() => {
         </>
       ) : (
         <div style={{ textAlign: "center", marginTop: "50px" }}>
-          <h2>✅ Poisson remonté avec succès ! CAPTCHA validé.</h2>
+          <h2>✅ Déchets remontés avec succès ! Bien joué !</h2>
         </div>
       )}
     </div>
   );
 };
 
-export default FishingCaptcha;
+export default fishnetingCaptcha;
