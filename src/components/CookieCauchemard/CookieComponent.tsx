@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import marlinFish from '../../assets/marlin-fish-stroke-by-Vexels.svg'
+import marlinFish from '../../assets/lobsterForClicker.png'
 import './CookieComponent.css'
 
 interface CookieProps {
@@ -22,7 +22,7 @@ function Cookie({ count, boolCookie, setCount, setBoolCookie }: CookieProps) {
             const button = buttonRef.current
             const maxX = clickerZone.clientWidth - button.clientWidth 
             const maxY = clickerZone.clientHeight - button.clientHeight - 20
-            const randomX = Math.floor(Math.random() * maxX + 50)
+            const randomX = Math.floor(Math.random() * maxX + 20)
             const randomY = Math.floor(Math.random() * maxY - 250)
             button.style.transform = `translate(${randomX}px, ${randomY}px)`
         }
@@ -43,7 +43,7 @@ function Cookie({ count, boolCookie, setCount, setBoolCookie }: CookieProps) {
     }, [boolCookie]);
 
     return (
-        <div className="clicker-zone" ref={clickerZoneRef}>
+        <div className="clicker-zone-click" ref={clickerZoneRef}>
             <img
                 ref={buttonRef}
                 src={marlinFish}
