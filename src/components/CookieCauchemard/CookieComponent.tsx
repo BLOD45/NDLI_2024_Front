@@ -1,22 +1,58 @@
-import { useState } from 'react';
+import { useEffect, useRef } from 'react'
+import marlinFish from '../../assets/lobsterForClicker.png'
+import './CookieComponent.css'
 
-function Cookie() {
-    const [boolCookie, setBoolCookie] = useState(false);
-    const [countCountCookie, setCountCountCookie] = useState(0);
-
-    return (
-        <div className="card">
-            <button onClick={() => setCountCountCookie((countCountCookie) => countCountCookie + 1)}>
-                count is {countCountCookie}
-            </button>
-            <button onClick={() => setBoolCookie((boolCookie) => !boolCookie)}>
-                {boolCookie ? 'Cookie is true' : 'Cookie is false'}
-            </button>
-            <p>
-                Edit <code>src/CookieCauchemard/CookieComponent.tsx</code> and save to test HMR
-            </p>
-        </div>
-    );
+interface CookieProps {
+    count: number
+    boolCookie: boolean
+    setCount: React.Dispatch<React.SetStateAction<number>>
+    setBoolCookie: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-export default Cookie;
+function Cookie({ count, boolCookie, setCount, setBoolCookie }: CookieProps) {
+    const buttonRef = useRef<HTMLImageElement>(null)
+    const clickerZoneRef = useRef<HTMLDivElement>(null)
+
+    const handleButtonClick = () => {
+        setCount((count) => (boolCookie ? count - 1 : count + 1))
+        setBoolCookie(true)
+
+        if (clickerZoneRef.current && buttonRef.current) {
+            const clickerZone = clickerZoneRef.current
+            const button = buttonRef.current
+            const maxX = clickerZone.clientWidth - button.clientWidth 
+            const maxY = clickerZone.clientHeight - button.clientHeight - 20
+            const randomX = Math.floor(Math.random() * maxX + 20)
+            const randomY = Math.floor(Math.random() * maxY - 250)
+            button.style.transform = `translate(${randomX}px, ${randomY}px)`
+        }
+    };
+
+    const handleClickOutside = (event: MouseEvent) => {
+        if (buttonRef.current && !buttonRef.current.contains(event.target as Node)) {
+            setCount((count) => (boolCookie ? count + 1 : count - 1));
+            setBoolCookie(false)
+        }
+    };
+
+    useEffect(() => {
+        document.addEventListener('click', handleClickOutside);
+        return () => {
+            document.removeEventListener('click', handleClickOutside);
+        };
+    }, [boolCookie]);
+
+    return (
+        <div className="clicker-zone-click" ref={clickerZoneRef}>
+            <img
+                ref={buttonRef}
+                src={marlinFish}
+                alt="Marlin Fish"
+                onClick={handleButtonClick}
+                className="clicker-image"
+            />
+        </div>
+    )
+}
+
+export default Cookie
