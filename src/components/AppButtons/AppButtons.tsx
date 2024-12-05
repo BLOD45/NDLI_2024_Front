@@ -3,19 +3,21 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import ButtonBase from '@mui/material/ButtonBase';
 import Typography from '@mui/material/Typography';
+import { useNavigate } from 'react-router-dom'; // Importer useNavigate pour la navigation
 import CaptchaImage from '../../assets/images/buttons/Captcha.jpg';
 import OceanImage from '../../assets/images/buttons/Ocean.png';
 import oceanVideo from '../../assets/videos/background/bubbles.mp4';
-import zIndex from '@mui/material/styles/zIndex';
 
 const images = [
   {
     url: CaptchaImage,
     title: 'Jouer au Cookie Clicker',
+    link: '/captcha',
   },
   {
     url: OceanImage,
     title: 'Découvrir les océans',
+    link: '/principale',
   },
 ];
 
@@ -47,6 +49,12 @@ const ImageSrc = styled('span')({
 });
 
 const AppButtons: React.FC = () => {
+    const navigate = useNavigate(); // Hook pour naviguer
+
+  const handleClick = (link: string) => {
+    navigate(link); // Redirige vers le lien spécifié
+  };
+
   return (
     <>
     <Box
@@ -109,7 +117,7 @@ const AppButtons: React.FC = () => {
               gap: '8px', // Space between image and text
             }}
           >
-            <ImageButton>
+            <ImageButton onClick={() => handleClick(image.link)}>
               <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
             </ImageButton>
             <Typography
