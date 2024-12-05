@@ -1,0 +1,17 @@
+{
+    "1": {
+        "homme": "L'acide gastrique, principalement composé d'acide chlorhydrique (HCl), est produit par l'estomac. Il joue un rôle crucial dans la digestion des aliments en activant les enzymes nécessaires à la dégradation des protéines et en facilitant l'absorption de nutriments comme le fer et le calcium. De plus, il agit comme une barrière protectrice contre les agents pathogènes ingérés, empêchant les infections dans le système digestif.",
+        "ocean": "Dans les océans, l'acidité est régulée par l'absorption de dioxyde de carbone (CO₂) atmosphérique. Les ions hydrogène libérés influencent le pH de l'eau. Cet équilibre chimique est essentiel pour les écosystèmes marins, notamment pour les organismes qui forment des coquilles et des squelettes à base de carbonate de calcium, comme les coraux et les mollusques. Une acidité bien régulée garantit leur survie et maintient la chaîne alimentaire marine.",
+        "parallel": "Une variation anormale du niveau d’acidité peut causer des déséquilibres majeurs. Dans le corps humain, une hyperacidité gastrique provoque des inflammations, des ulcères et interfère avec la digestion. Dans les océans, une acidification accrue liée au CO₂ affaiblit les coraux et perturbe les écosystèmes, menaçant la biodiversité et les ressources halieutiques. Ces dérèglements, bien qu'éloignés, illustrent l'importance de réguler les processus chimiques vitaux, tant pour la santé humaine que pour la stabilité environnementale."
+    },
+    "2": {
+        "homme": "Title 2",
+        "ocean": "Text 3",
+        "parallel": "Text 4"
+    },
+    "6": {
+        "homme": "Le système osseux fournit une structure qui soutient et protège les organes vitaux du corps humain. Composé de 206 os chez l’adulte (sans prendre en compte les dents), il permet la mobilité grâce à son interaction avec les muscles. Les tissus osseux servent aussi de réserve pour le stockage des minéraux tel que le calcium.",
+        "ocean": "Les dorsales océaniques sont des chaînes montagneuses sous-marines où de nouvelles croûtes océaniques se forment par la montée de magma du manteau terrestre. Elles apparaissent lorsque des plaques tectoniques se séparent, laissant le magma combler la fracture et se refroidir pour créer un plancher océanique. Ces dorsales influencent les courants océaniques et participent à la distribution des nutriments et de la chaleur issus des volcans sous-marins. Les fosses océaniques se forment lorsque deux plaques tectoniques se rencontrent, l’une allant sous l’autre. Cette rencontre crée la présence d’une zone de subduction.",
+        "parallel": "Comme le système osseux fournit la structure et la stabilité au corps humain, les dorsales et fosses océaniques façonnent la structure de la croûte terrestre sous marines. Tout comme une maladie osseuse impact la qualité de vie humaine, un déséquilibre au niveau des fosses et dorsales peut impacter la forme des fonds marins ainsi que la faune et la flore marines."
+    }
+}
