@@ -85,7 +85,6 @@ function Cookie({ count, boolCookie, setCount, setBoolCookie }: CookieProps) {
             const constrainedX = Math.min(Math.max(mirrorX, 20), maxX);
             const constrainedY = Math.min(Math.max(mirrorY, -300), maxY);
             
-            console.log(constrainedX,constrainedY,maxX,maxY)
             button.style.transform = `translate(${constrainedX}px, ${constrainedY}px)`
             }
               
