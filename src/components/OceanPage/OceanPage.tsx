@@ -51,7 +51,7 @@ const OceanPage: React.FC = () => {
                         left: "30%",
                         width: "50px",
                         height: "50px",
-                        backgroundColor: "rgba(255, 0, 0, 0.25)", // Semi-transparent red
+                        backgroundColor: "rgba(255, 0, 0, 0.5)", // Semi-transparent red
                         border: "none",
                         cursor: "pointer"
                     }}
@@ -67,7 +67,7 @@ const OceanPage: React.FC = () => {
                         left: "60%",
                         width: "50px",
                         height: "50px",
-                        backgroundColor: "rgba(0, 0, 255, 0.25)", // Semi-transparent blue
+                        backgroundColor: "rgba(0, 0, 255, 0.5)", // Semi-transparent blue
                         border: "none",
                         cursor: "pointer"
                     }}
@@ -83,7 +83,7 @@ const OceanPage: React.FC = () => {
                         left: "50%",
                         width: "50px",
                         height: "50px",
-                        backgroundColor: "rgba(0, 255, 0, 0.25)", // Semi-transparent green
+                        backgroundColor: "rgba(0, 255, 0, 0.5)", // Semi-transparent green
                         border: "none",
                         cursor: "pointer"
                     }}
@@ -99,7 +99,7 @@ const OceanPage: React.FC = () => {
                         left: "23%",
                         width: "50px",
                         height: "50px",
-                        backgroundColor: "rgba(0,0,0, 0.25)", // Semi-transparent yellow
+                        backgroundColor: "rgba(0,0,0, 0.5)", // Semi-transparent yellow
                         border: "none",
                         cursor: "pointer"
                     }}
@@ -115,7 +115,7 @@ const OceanPage: React.FC = () => {
                         left: "64%",
                         width: "50px",
                         height: "50px",
-                        backgroundColor: "rgba(255, 255, 0, 0.25)", // Semi-transparent black
+                        backgroundColor: "rgba(255, 255, 0, 0.5)", // Semi-transparent black
                         border: "none",
                         cursor: "pointer"
                     }}
