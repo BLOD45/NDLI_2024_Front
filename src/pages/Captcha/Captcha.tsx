@@ -1,15 +1,13 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import Canva from '../../components/game-tcha-canva/canva';
 
-const Captcha: React.FC = () => {
-    return (
-        <div>
-            <h1>Captcha</h1>
-            <button>
-                <Link to="/choix">Vers Crédit ou CookieCauchemar</Link>
-            </button>
-        </div>
-    )
+
+const fishnetingCaptcha: React.FC = () => {
+  return(
+    <>
+      <Canva />
+    </>
+  )
 }
 
-export default Captcha
+export default fishnetingCaptcha;
