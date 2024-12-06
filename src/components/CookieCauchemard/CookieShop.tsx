@@ -1,4 +1,5 @@
 import React from 'react';
+import './CookieShop.css';
 
 interface CookieShopProps {
     count: number;
@@ -10,8 +11,8 @@ function CookieShop({ count, boolCookie }: CookieShopProps) {
         <div className="shop">
             <h1>Shop</h1>
             <div className="indicator">
-                <p>Count: {count}</p>
-                <p>Cookie: {boolCookie ? 'true' : 'false'}</p>
+                <p className="left-align">Count: {count}</p>
+                {/* <p>Cookie: {boolCookie ? 'true' : 'false'}</p> */}
             </div>
             {/* Shop content will be added here later */}
         </div>
