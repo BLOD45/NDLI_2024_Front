@@ -1,36 +1,22 @@
 .topbar {
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 16px;
-  }
-  
-  .topbar.light {
-    background-color: #f5f5f5;
-  }
-  
-  .topbar.dark {
-    background-color: #444;
-  }
-  
-  .switch-button {
-    padding: 8px 16px;
-    background-color: #ddd;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
-  }
-  
-  .switch-button:hover {
-    background-color: #ccc;
-  }
-  
-  .topbar.dark .switch-button {
-    background-color: #888;
-  }
-  
-  .topbar.dark .switch-button:hover {
-    background-color: #777;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background-color: rgba(0, 0, 0, 0.5); /* Arrière-plan semi-transparent */
+  color: white;
+}
+
+.topbar.human {
+  background-color: rgba(255, 255, 255, 0.7); /* Style distinct pour 'human' */
+  color: black;
+}
+
+.topbar.ocean {
+  background-color: rgba(0, 0, 50, 0.7); /* Style distinct pour 'ocean' */
+  color: white;
+}
+
+.switch-button {
+  transform: scale(1.2); /* Agrandit légèrement le switch */
+}
