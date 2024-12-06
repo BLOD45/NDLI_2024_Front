@@ -11,7 +11,7 @@ interface CookieShopProps {
     setRandomMultiplier: React.Dispatch<React.SetStateAction<number>>;
 }
 
-function CookieShop({ count, setCount, boolCookie, varTemp, setVarTemp, randomMultiplier, setRandomMultiplier }: CookieShopProps) {
+function CookieShop({ count, setCount, varTemp, setVarTemp, randomMultiplier, setRandomMultiplier }: CookieShopProps) {
 
     useEffect(() => {
         const interval = setInterval(() => {
