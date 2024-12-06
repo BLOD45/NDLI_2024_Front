@@ -5,13 +5,29 @@
         "parallel": "Une variation anormale du niveau d’acidité peut causer des déséquilibres majeurs. Dans le corps humain, une hyperacidité gastrique provoque des inflammations, des ulcères et interfère avec la digestion. Dans les océans, une acidification accrue liée au CO₂ affaiblit les coraux et perturbe les écosystèmes, menaçant la biodiversité et les ressources halieutiques. Ces dérèglements, bien qu'éloignés, illustrent l'importance de réguler les processus chimiques vitaux, tant pour la santé humaine que pour la stabilité environnementale."
     },
     "2": {
-        "homme": "Title 2",
-        "ocean": "Text 3",
-        "parallel": "Text 4"
+        "homme": "Le cœur est l’élément central en charge de la vie d’un être humain. C’est une pompe : il gère la circulation du sang pour oxygéner et amener les nutriments partout dans le corps au moyen des vaisseaux sanguins. Le cœur pompe 5 litres de sang par minute et bat environ 3 milliard de fois lors d’une vie. Sa taille est égale à 1,5 fois la taille du poing de la personne concernée.",
+        "ocean": "Les marées sont dues à l’interaction gravitationnelle entre la terre, le soleil et la lune, combinée à la rotation de la Terre (force centrifuge). Les marées les plus fortes ont lieu lors de l’équinoxe de printemps et d’automne, et les plus faibles pendant les solstices d’été et d’hiver.",
+        "parallel": "Le cœur a un mouvement de gonflement/dégonflement, on peut rapprocher ce comportement au mouvement de flux/reflux des marées. La fonte des glaciers, en causant la montée du niveau de la mer, mène à des inondations, et peut à terme mener à la submersion de territoires habitées. Cette montée des hauts mène à un dérèglement des marées. De même qu’un dérèglement des marées perturbe le fonctionnement global des océans, un dysfonctionnement du cœur peut être fatal à la vie de l’homme. On peut notamment parler de crise de tachycardie (emballement du coeur)"
     },
-    "6": {
+    "3": {
         "homme": "Le système osseux fournit une structure qui soutient et protège les organes vitaux du corps humain. Composé de 206 os chez l’adulte (sans prendre en compte les dents), il permet la mobilité grâce à son interaction avec les muscles. Les tissus osseux servent aussi de réserve pour le stockage des minéraux tel que le calcium.",
         "ocean": "Les dorsales océaniques sont des chaînes montagneuses sous-marines où de nouvelles croûtes océaniques se forment par la montée de magma du manteau terrestre. Elles apparaissent lorsque des plaques tectoniques se séparent, laissant le magma combler la fracture et se refroidir pour créer un plancher océanique. Ces dorsales influencent les courants océaniques et participent à la distribution des nutriments et de la chaleur issus des volcans sous-marins. Les fosses océaniques se forment lorsque deux plaques tectoniques se rencontrent, l’une allant sous l’autre. Cette rencontre crée la présence d’une zone de subduction.",
         "parallel": "Comme le système osseux fournit la structure et la stabilité au corps humain, les dorsales et fosses océaniques façonnent la structure de la croûte terrestre sous marines. Tout comme une maladie osseuse impact la qualité de vie humaine, un déséquilibre au niveau des fosses et dorsales peut impacter la forme des fonds marins ainsi que la faune et la flore marines."
+    },
+    "4": {
+        "homme": "Le système cardiovasculaire assure le transport du sang dans le corps humain. Composé du cœur, des vaisseaux sanguins et du sang, il permet d’acheminer l’oxygène, les nutriments et les hormones aux cellules, tout en éliminant les déchets tels que le dioxyde de carbone. Ce système est vital pour maintenir la régulation thermique et l’équilibre des fluides dans l’organisme.",
+        "ocean": "Le cycle de l’eau est un processus global qui maintient la disponibilité et le mouvement de l’eau sur Terre. Les océans constituent la ressource principale de ce cycle (97%). Par évaporation, l’eau passe de la surface terrestre à l’atmosphère, où elle se condense pour former des nuages, puis retombe sous forme de précipitations. Ce cycle nourrit les écosystèmes et régule le climat. Cependant, le réchauffement climatique perturbe ce processus, accélérant l’évaporation, modifiant les schémas de précipitation et aggravant la sécheresse ou les inondations, menaçant ainsi les écosystèmes et les ressources en eau.",
+        "parallel": "Tout comme le système cardiovasculaire distribue les éléments vitaux dans le corps humain, le cycle de l’eau assure le renouvellement et la répartition de l’eau sur Terre. Les deux sont essentiels à la vie et un dérèglement dans l’un ou l’autre peut provoquer de graves déséquilibres : maladies et dysfonctionnements pour le corps, catastrophes climatiques et stress hydrique pour la planète. Le réchauffement climatique impacte le cycle de l’eau, tout comme des pathologies ou des habitudes néfastes perturbent le système circulatoire."
+    },
+    "5": {
+        "homme": "Les poumons assurent l’échange d’oxygène et de CO₂ nécessaire à la vie. Leur fonctionnement est fragilisé par la pollution et des maladies respiratoires.",
+        "ocean": "Le phytoplancton produit une grande partie de l’oxygène terrestre et absorbe près de 50 % du CO₂ émis, tout en formant la base de la chaîne alimentaire marine. La pollution et le réchauffement climatique menacent cet équilibre vital.",
+        "parallel": "Les poumons humains et le phytoplancton régulent les gaz vitaux : l’un pour l’individu, l’autre pour la planète. Tous deux sont essentiels et vulnérables face aux pressions environnementales."
+
+    },
+    "6": {
+        "homme": "La peau protège le corps des agressions extérieures comme les rayons UV et les infections. Lorsqu’elle est endommagée, le risque d’intrusion de maladies augmente, rendant l’organisme vulnérable.",
+        "ocean": "Les barrières de corail jouent un rôle essentiel dans les écosystèmes marins, abritant de nombreuses espèces et les protégeant des prédateurs. Elles servent aussi de rempart naturel en réduisant la force des vagues, limitant ainsi l’érosion côtière. Cependant, le changement climatique et la pollution menacent leur survie.",
+        "parallel": "Les barrières de corail et la peau humaine agissent comme des boucliers : les coraux protègent les côtes et les écosystèmes marins, tandis que la peau défend le corps humain. Tous deux, fragiles et indispensables, subissent les effets des agressions externes, compromettant leur capacité à préserver la vie qu’ils protègent."
     }
 }

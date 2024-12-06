@@ -1,0 +1,4 @@
+.popup-text {
+    max-height: 90vh; /* Limite la hauteur du texte à 70% de la fenêtre */
+    word-wrap: break-word; /* Assure que les mots longs sont coupés pour ne pas déborder */
+}

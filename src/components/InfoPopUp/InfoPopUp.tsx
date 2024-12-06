@@ -1,4 +1,5 @@
 import React from "react";
+import "./InfoPopUp.css";
 
 interface InfoPopUpProps {
     isVisible: boolean; // Controle de la visibilité du composant
@@ -14,8 +15,10 @@ function InfoPopUp({ isVisible, content, onClose }: InfoPopUpProps) {
     return (
         <div className="info-popup">
             <div className="info-popup-content">
-                {content}
-                <button onClick={onClose}>Fermer</button>
+                <div className="popup-text">
+                    {content}
+                    <button className="popup-close" onClick={onClose}>Fermer</button>
+                </div>
             </div>
         </div>
     );
