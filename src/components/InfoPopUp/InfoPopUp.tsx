@@ -1,4 +1,5 @@
 import React from "react";
+import "./InfoPopUp.css";
 
 interface InfoPopUpProps {
     isVisible: boolean; // Controle de la visibilité du composant
