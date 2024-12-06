@@ -4,19 +4,19 @@ import Box from '@mui/material/Box';
 import ButtonBase from '@mui/material/ButtonBase';
 import Typography from '@mui/material/Typography';
 import { useNavigate } from 'react-router-dom'; // Importer useNavigate pour la navigation
-import CaptchaImage from '../../assets/images/buttons/Captcha.jpg';
-import OceanImage from '../../assets/images/buttons/Ocean.png';
+import ClickerImage from '../../assets/images/buttons/NDLI24_lobsterclicker.png';
+import CreditImage from '../../assets/images/buttons/NDLI24_credits.png';
 import oceanVideo from '../../assets/videos/background/bubbles.mp4';
 
 const images = [
   {
-    url: CaptchaImage,
-    title: 'Jouer au Cookie Clicker',
+    url: CreditImage,
+    title: 'Qui sommes nous ?',
     link: '/credits',
   },
   {
-    url: OceanImage,
-    title: 'Découvrir les océans',
+    url: ClickerImage,
+    title: 'Jouer au cookie clicker (vraiment cette fois)',
     link: '/cauchemardcookie',
   },
 ];
