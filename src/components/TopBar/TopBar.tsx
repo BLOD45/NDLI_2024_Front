@@ -10,7 +10,6 @@ interface TopBarProps {
 const TopBar: React.FC<TopBarProps> = ({ onToggle, mode }) => {
   return (
     <header className={`topbar ${mode ? "human" : "ocean"}`}>
-      <h1>Mon Site</h1>
       <Switch
         className="switch-button"
         checked={mode} // L'état du switch suit `mode`
