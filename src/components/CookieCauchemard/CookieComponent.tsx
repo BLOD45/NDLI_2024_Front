@@ -24,6 +24,7 @@ function Cookie({ count, boolCookie, setCount, setBoolCookie }: CookieProps) {
             const button = buttonRef.current
             const maxX = clickerZone.clientWidth - button.clientWidth 
             const maxY = clickerZone.clientHeight - button.clientHeight - 50
+
             const randomX = Math.floor(Math.random() * maxX + 20)
             const randomY = Math.floor(Math.random() * maxY - 250)
             button.style.transform = `translate(${randomX}px, ${randomY}px)`
@@ -54,37 +55,37 @@ function Cookie({ count, boolCookie, setCount, setBoolCookie }: CookieProps) {
               (doc && doc.clientTop  || body && body.clientTop  || 0 );
         }
 
-        if(clickerZoneRef.current && buttonRef.current){              
+        if(clickerZoneRef.current && buttonRef.current){ 
+            const clickerZone = clickerZoneRef.current;
+            const button = buttonRef.current;             
               const match = clickerZoneRef.current?.innerHTML.match(/translate\(([^,]+),\s*([^)]+)\)/);
-              var objectX = 0;
-              var objectY = 0;
+              var objectX = 400 + button.clientWidth/2;
+              var objectY = 290  + button.clientHeight/2;
               
               if (match) {
-                objectX = parseInt(match[1].trim(), 10) + 400;
-                objectY = parseInt(match[2].trim(), 10) + 290;
+                objectX = parseInt(match[1].trim(), 10) + 400 + button.clientWidth/2;
+                objectY = parseInt(match[2].trim(), 10) + 290  + button.clientHeight/2;
               } 
 
             // Récupérer les coordonnées de la souris
             const mouseX = event.pageX;
             const mouseY = event.pageY;
               
-            if(Math.sqrt(Math.pow(objectX - mouseX,2)) + Math.sqrt(Math.pow(objectY - mouseY,2)) < 100){
-                // Calculer le point miroir
-            const mirrorX = 2 * objectX - mouseX;
-            const mirrorY = 2 * objectY - mouseY;
-            console.log(objectX,objectY)
-            console.log(mouseX,mouseY)
+            const dist = Math.sqrt(Math.pow(mouseX - objectX,2)) + Math.sqrt(Math.pow(mouseY - objectY,2));
+
+            if(dist < 200){
+            // Calculer le point miroir
+            const mirrorX = (-0.00195*dist + 2) * objectX - mouseX;
+            const mirrorY = (-0.005*dist + 2) * objectY - mouseY;
             
             // Contraindre le point miroir aux limites
-            const clickerZone = clickerZoneRef.current;
-            const button = buttonRef.current;
-            const maxX = clickerZone.clientWidth - button.clientWidth;
+            const maxX = clickerZone.clientWidth - button.clientWidth + 20;
             const maxY = clickerZone.clientHeight - button.clientHeight - 50;
-            
+
             const constrainedX = Math.min(Math.max(mirrorX, 20), maxX);
-            const constrainedY = Math.min(Math.max(mirrorY, -250), maxY);
+            const constrainedY = Math.min(Math.max(mirrorY, -300), maxY);
             
-            console.log(constrainedX,constrainedY)
+            console.log(constrainedX,constrainedY,maxX,maxY)
             button.style.transform = `translate(${constrainedX}px, ${constrainedY}px)`
             }
               
