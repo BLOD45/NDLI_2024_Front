@@ -17,8 +17,8 @@ function InfoPopUp({ isVisible, content, onClose }: InfoPopUpProps) {
             <div className="info-popup-content">
                 <div className="popup-text">
                     {content}
+                    <button className="popup-close" onClick={onClose}>Fermer</button>
                 </div>
-                <button className="popup-close" onClick={onClose}>Fermer</button>
             </div>
         </div>
     );
