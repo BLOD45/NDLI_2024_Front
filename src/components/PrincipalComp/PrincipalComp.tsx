@@ -15,11 +15,12 @@ const PrincipalComp: React.FC = () => {
         <div
           className={`app ${mode ? "ocean" : "human"}`}
           style={{
+            top: 0,
             backgroundImage: `url(${mode ? OceanImage : HumanImage})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            width: '100%',
-            height: '100vh',
+            width: '100vw',
+            height: '10vh',
           }}
         >
           <TopBar onToggle={toggleChangeMode} mode={mode} />
