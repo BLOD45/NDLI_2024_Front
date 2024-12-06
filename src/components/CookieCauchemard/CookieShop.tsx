@@ -31,6 +31,7 @@ function CookieShop({ count, setCount, boolCookie, varTemp, setVarTemp, randomMu
 
     return (
         <div className="shop">
+            <a href="/" className="logo" style={{ color: "white", padding: "10px" }}> Accueil </a>
             <h1>Shop</h1>
             <div className="indicator">
                 <p className="left-align">Count: {count}</p>

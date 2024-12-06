@@ -10,6 +10,7 @@
     /* Node mode */
     "moduleResolution": "node",
     "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
     "isolatedModules": true,
     "esModuleInterop": true,
     "noImplicitAny": false,

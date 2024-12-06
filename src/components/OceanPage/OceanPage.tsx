@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import texts from '/src/assets/text/texts.json'; // Assurez-vous que le chemin est correct
+import texts from '../../assets/text/texts.json';
 
 const OceanPage: React.FC = () => {
     const [popupVisible, setPopupVisible] = useState(false);
-    const [popupContent, setPopupContent] = useState('');
+    const [popupContent, setPopupContent] = useState<React.ReactNode>(null);
 
     const handleButtonClick = (key: string) => {
         let content: string[] = []; // Utilisez la clé pour accéder au texte de l'océan

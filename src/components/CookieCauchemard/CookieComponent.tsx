@@ -1,8 +1,6 @@
 import { useEffect, useRef } from 'react'
 import marlinFish from '../../assets/lobsterForClicker.png'
 import './CookieComponent.css'
-import { Mouse } from '@mui/icons-material'
-import { Button } from '@mui/material'
 
 interface CookieProps {
     count: number
@@ -12,7 +10,7 @@ interface CookieProps {
     randomMultiplier: number
 }
 
-function Cookie({ count, boolCookie, setCount, setBoolCookie, randomMultiplier }: CookieProps) {
+function Cookie({ boolCookie, setCount, setBoolCookie, randomMultiplier }: CookieProps) {
     const buttonRef = useRef<HTMLImageElement>(null)
     const clickerZoneRef = useRef<HTMLDivElement>(null)
 
