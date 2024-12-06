@@ -9,15 +9,16 @@ interface CookieProps {
     boolCookie: boolean
     setCount: React.Dispatch<React.SetStateAction<number>>
     setBoolCookie: React.Dispatch<React.SetStateAction<boolean>>
+    randomMultiplier: number
 }
 
-function Cookie({ count, boolCookie, setCount, setBoolCookie }: CookieProps) {
+function Cookie({ count, boolCookie, setCount, setBoolCookie, randomMultiplier }: CookieProps) {
     const buttonRef = useRef<HTMLImageElement>(null)
     const clickerZoneRef = useRef<HTMLDivElement>(null)
 
     const handleButtonClick = () => {
-        setCount((count) => (boolCookie ? count - 1 : count + 1))
-        setBoolCookie(true)
+        setCount((count) => Math.round(boolCookie ? count - randomMultiplier : count + randomMultiplier));
+        setBoolCookie(true);
 
         if (clickerZoneRef.current && buttonRef.current) {
             const clickerZone = clickerZoneRef.current
@@ -33,8 +34,8 @@ function Cookie({ count, boolCookie, setCount, setBoolCookie }: CookieProps) {
 
     const handleClickOutside = (event: MouseEvent) => {
         if (buttonRef.current && !buttonRef.current.contains(event.target as Node)) {
-            setCount((count) => (boolCookie ? count + 1 : count - 1));
-            setBoolCookie(false)
+            setCount((count) => Math.round(boolCookie ? count + randomMultiplier : count - randomMultiplier));
+            setBoolCookie(false);
         }
     };
 
