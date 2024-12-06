@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import TopBar from "../TopBar/TopBar";
-import HumanImage from "../../assets/images/principal/human.png";
-import OceanImage from "../../assets/images/principal/ocean.jpg";
+import HumanPage from '../HumanPage/HumanPage';
 
 const PrincipalComp: React.FC = () => {
     const [mode, setMode] = useState(false);
@@ -24,7 +23,7 @@ const PrincipalComp: React.FC = () => {
         <div
           style={{ height: "90vh", width: "100vw", alignContent: "center"}}
         >
-          {mode ? <h1>Test Ocean</h1> : <h1>Test Human</h1>}
+          {mode ? <HumanPage></HumanPage> : <h1>Test Human</h1>}
         </div>
 
       </>
