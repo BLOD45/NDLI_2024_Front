@@ -1,0 +1,59 @@
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: fill;
+    position: relative; /* Ensure the container is positioned relative for the video */
+    overflow: hidden; /* Hide any overflow */
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the video covers the entire background */
+    z-index: -1; /* Place the video behind other elements */
+}
+
+.shop {
+    background-color: rgba(133, 126, 224, 0.726); /* Add some transparency */
+    padding: 1vw ;
+    display: flex;
+    flex-direction: column;
+    justify-content: top; /* Center items vertically */
+    align-items: left; /* Center items horizontally */
+    width: 20%;
+    height: 100%;
+    z-index: 1; /* Ensure the shop is above the video */
+}
+
+
+.clicker-zone {
+    position: relative;
+    background-color: rgba(43, 53, 197, 0.425); /* Add some transparency */
+    padding: 0;
+    overflow: clip;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center items horizontally */
+    width: 80%;
+    height: auto;
+    z-index: 1; /* Ensure the clicker zone is above the video */
+    text-align: center; /* Center text */
+}
+
+.clicker-zone-click {
+    position: relative;
+    padding: 0;
+    overflow: clip;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    z-index: 1; /* Ensure the clicker zone click is above the video */
+}
