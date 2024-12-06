@@ -14,8 +14,10 @@ function InfoPopUp({ isVisible, content, onClose }: InfoPopUpProps) {
     return (
         <div className="info-popup">
             <div className="info-popup-content">
-                {content}
-                <button onClick={onClose}>Fermer</button>
+                <div className="popup-text">
+                    {content}
+                </div>
+                <button className="popup-close" onClick={onClose}>Fermer</button>
             </div>
         </div>
     );

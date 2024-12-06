@@ -6,6 +6,7 @@ import blood from "../../assets/images/human/blood.png";
 import bone from "../../assets/images/human/bone.png";
 import heart from "../../assets/images/human/heart.png";
 import stomach from "../../assets/images/human/stomach.png";
+import "./HumanPage.css";
 
 const HumanPage: React.FC = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -32,30 +33,30 @@ const HumanPage: React.FC = () => {
     };
 
     return (
-        <div style={{ display: "flex", height: "100vh", justifyContent: "center", alignItems: "center" }}>
-            {/* Colonne avec les boutons, fixée à une largeur de 150px */}
-            <div style={{ display: "flex", flexDirection: "column", marginRight: "20px", width: "150px", textAlign: "center" }}>
+        <div className="human-page">
+            {/* Colonne avec les boutons */}
+            <div className="buttons-column">
                 <button onClick={() => handleButtonClick("1")}>
-                <img src={stomach} alt="stomach" style={{ width: "50px", height: "50px" }} />
+                    <img src={stomach} alt="stomach" style={{ width: "50px", height: "50px" }} />
                 </button>
                 <button onClick={() => handleButtonClick("2")}>
-                <img src={heart} alt="heart" style={{ width: "50px", height: "50px" }} />
+                    <img src={heart} alt="heart" style={{ width: "50px", height: "50px" }} />
                 </button>
                 <button onClick={() => handleButtonClick("3")}>
-                <img src={bone} alt="bone" style={{ width: "50px", height: "50px" }} />
+                    <img src={bone} alt="bone" style={{ width: "50px", height: "50px" }} />
                 </button>
                 <button onClick={() => handleButtonClick("4")}>
-                <img src={blood} alt="blood" style={{ width: "50px", height: "50px" }} />
+                    <img src={blood} alt="blood" style={{ width: "50px", height: "50px" }} />
                 </button>
             </div>
 
-            {/* Image principale, centrée et fixée à une taille de 400px */}
-            <div style={{ width: "400px", textAlign: "center" }}>
-                <img src={HumanImage} alt="Human" style={{ width: "100%", height: "auto" }} />
+            {/* Colonne de l'image */}
+            <div className="image-column">
+                <img src={HumanImage} alt="Human" />
             </div>
 
-            {/* Colonne du pop-up, avec un max-width pour éviter que le texte déborde */}
-            <div style={{ width: "300px", marginLeft: "20px" }}>
+            {/* Colonne du texte */}
+            <div className="popup-column">
                 <InfoPopUp
                     isVisible={isVisible}
                     content={popupContent}

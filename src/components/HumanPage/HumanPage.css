@@ -1,0 +1,41 @@
+.human-page {
+    display: flex;
+    height: 100vh; /* Prend toute la hauteur de la fenêtre */
+    width: 100vw;  /* Prend toute la largeur de la fenêtre */
+}
+
+.human-page .buttons-column {
+    flex: 1; /* 33% de la largeur */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrer les boutons verticalement */
+    align-items: center; /* Centrer les boutons horizontalement */
+    padding: 20px;
+}
+
+.human-page .image-column {
+    flex: 1; /* 33% de la largeur */
+    display: flex;
+    justify-content: center; /* Centrer l'image horizontalement */
+    align-items: center; /* Centrer l'image verticalement */
+}
+
+.human-page .popup-column {
+    flex: 1; /* 33% de la largeur */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrer le texte verticalement */
+    padding: 20px;
+    overflow-y: auto; /* Barre de défilement si le texte dépasse */
+    text-align: justify; /* Texte justifié */
+}
+
+.human-page .popup-column p {
+    font-size: 1.2rem; /* Agrandir le texte */
+    line-height: 1.6; /* Espacement entre les lignes */
+}
+
+.human-page img {
+    max-width: 100%; /* L'image occupe toute la largeur possible */
+    height: 90%; /* Préserver les proportions */
+}
