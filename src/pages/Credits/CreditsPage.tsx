@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Credit from "../../components/CreditPage/PersonComp";
+import SideBarMenu from "../../components/SideBarMenu/SideBarMenu";
 import "./CreditsPage.css"
 
 // Importation des images directement
@@ -13,8 +14,45 @@ import hypoImage from "../../assets/images/PP/hypo.png";
 import kazenoImage from "../../assets/images/PP/kazeno.png";
 import ombruImage from "../../assets/images/PP/ombru.png";
 import zephImage from "../../assets/images/PP/zeph.png";
+import konami from "../../assets/images/credits/maxwell.gif"
 
-const CreditPage = () => {
+const CreditPage = () => {        
+    const [mode, setmode] = useState('mode retro');
+    const isPixelated = mode === "mode true retro";
+
+    const [konamiCodeActivate, setKonamiCodeActivate] = useState(false);
+
+    const konamiSequence = [
+        "ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight",
+        "ArrowLeft", "ArrowRight", "b", "a"
+    ];
+
+    let userInput = [];
+
+    useEffect(() => {
+        const keyPress = (event) => {
+            userInput.push(event.key);
+
+            if (userInput.length > konamiSequence.length) {
+                userInput.shift();
+            }
+
+            if (userInput.join('') === konamiSequence.join('')) {
+                setKonamiCodeActivate(true);
+
+                setTimeout(() => {
+                    setKonamiCodeActivate(false)
+                },3000);
+            }
+        };
+        
+        window.addEventListener("keydown", keyPress);
+
+        return () => {
+            window.removeEventListener("keydown", keyPress);
+        };
+    }, [userInput])
+
     const members = [
         {
             name: "Archi",
@@ -68,22 +106,29 @@ const CreditPage = () => {
         },
     ];
 
+
     return( 
-        <div className="page-credit">
-            <span className="nes-text is-disabled">
-                <h1>Page de crédit</h1>
-            </span>
-            <div className="credit-grid">
-                {members.map((member, index) => (
-                    <Credit
-                        key={index}
-                        name={member.name}
-                        image={member.image}
-                        role={member.role}
-                    />
-                ))}
-            </div>
-        </div>        
+        <div className={`page-credit ${isPixelated ? "pixelated-container" : ""}`}>
+            <SideBarMenu setMode={setmode}/>            
+            <h1>Page de crédit</h1>
+            {konamiCodeActivate && (
+                <div className="konami-image">
+                    <img src={konami} alt="maxwell"/>
+                </div>
+            )}
+            <div className={`content ${isPixelated ? "pixelated" : ""}`}>
+                <div className="credit-grid">
+                    {members.map((member, index) => (
+                        <Credit
+                            key={index}
+                            name={member.name}
+                            image={member.image}
+                            role={member.role}
+                        />
+                    ))}
+                </div>
+            </div>   
+        </div>     
     )
 }
 

@@ -17,7 +17,8 @@ function PersonComp({ name, image, role }: PersonCompProps) {
             <div className="nes-badge note">
                 <span className="is-error">{role}</span>
             </div>
-
+            <br></br>
+            <br></br>
             <p className="name nes-text is-success"> &lt;{name}&gt; </p>
         </div>
     );

@@ -2,14 +2,14 @@
     margin: 2em;
     aspect-ratio: 1 / 1;
 
-    
+    margin-bottom: 3em;
 
 }
 
 .name {
     text-align: center;
 
-    margin-top: 1em;
+    margin-top: auto;
 }
 
 .is-error{
