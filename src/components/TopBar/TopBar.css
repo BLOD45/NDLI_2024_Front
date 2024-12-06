@@ -1,28 +1,10 @@
 /* TopBar.css */
 .topbar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 10vh;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px;
   background-color: rgba(0, 0, 0, 0.5); /* Arrière-plan semi-transparent */
   color: white;
-}
-
-.topbar.human {
-  background-color: rgba(255, 255, 255, 0.7); /* Style distinct pour 'human' */
-  color: black;
-}
-
-.topbar.ocean {
-  background-color: rgba(0, 0, 50, 0.7); /* Style distinct pour 'ocean' */
-  color: white;
-}
-
-.switch-button {
-  transform: scale(1.2); /* Agrandit légèrement le switch */
 }
