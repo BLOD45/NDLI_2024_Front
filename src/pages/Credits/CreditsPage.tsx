@@ -11,47 +11,47 @@ const CreditPage = () => {
         },
         {
             name: "Cerzen",
-            image: "../../assets/images/pp/cerzen.png",
+            image: "../../assets/images/PP/cerzen.png",
             role: "tmp"
         },
         {
             name: "Colibry",
-            image: "../../assets/images/pp/colibry.png",
+            image: "../../assets/images/PP/colibry.png",
             role: "tmp"
         },
         {
             name: "Cyrers",
-            image: "../../assets/images/pp/cyrers.png",
+            image: "../../assets/images/PP/cyrers.png",
             role: "tmp"
         },
         {
             name: "DryloXx",
-            image: "../../assets/images/pp/dryloxx.png",
+            image: "../../assets/images/PP/dryloxx.png",
             role: "tmp"
         },
         {
             name: "Fyne",
-            image: "../../assets/images/pp/fyne.png",
+            image: "../../assets/images/PP/fyne.png",
             role: "tmp"
         },
         {
             name: "Hypo",
-            image: "../../assets/images/pp/hypo.png",
+            image: "../../assets/images/PP/hypo.png",
             role: "tmp"
         },
         {
             name: "Kazeno",
-            image: "../../assets/images/pp/kazeno.png",
+            image: "../../assets/images/PP/kazeno.png",
             role: "tmp"
         },
         {
             name: "Ombrustou",
-            image: "../../assets/images/pp/ombru.png",
+            image: "../../assets/images/PP/ombru.png",
             role: "tmp"
         },
         {
             name: "Zeph",
-            image: "../../assets/images/pp/zeph.png",
+            image: "../../assets/images/PP/zeph.png",
             role: "tmp"
         },
     ];

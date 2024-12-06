@@ -1,0 +1,21 @@
+.page-credits {
+  background: linear-gradient(to bottom, #1a1a2e, #16213e); /* Dégradé sombre */
+  color: #ffffff;
+  font-family: 'Press Start 2P', cursive; /* Typographie rétro */
+  text-align: center;
+  min-height: 100vh;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.credits-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 membres par ligne sur grand écran */
+  gap: 20px;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  grid-template-rows: auto; /* Ajuste la hauteur des lignes */
+}
