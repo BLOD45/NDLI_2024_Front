@@ -1,3 +1,5 @@
+import React from "react";
+// import 'nes.css/css/nes.min.css';
 import "./PersonComp.css"
 
 interface PersonCompProps {

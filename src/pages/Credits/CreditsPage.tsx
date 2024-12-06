@@ -1,3 +1,4 @@
+import React from "react";
 import Credit from "../../components/CreditPage/PersonComp";
 import "./CreditsPage.css"
 
