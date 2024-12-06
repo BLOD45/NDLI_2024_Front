@@ -13,23 +13,22 @@ const PrincipalComp: React.FC = () => {
     return (
       <>
         <div
+          style={{ height: "10vh", width: "100vw"}}
           className={`app ${mode ? "ocean" : "human"}`}
-          style={{
-            top: 0,
-            backgroundImage: `url(${mode ? OceanImage : HumanImage})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            width: '100vw',
-            height: '10vh',
-          }}
         >
           <TopBar onToggle={toggleChangeMode} mode={mode} />
           <main className="main-content">
-            {/* Votre contenu principal */}
           </main>
         </div>
+
+        <div
+          style={{ height: "90vh", width: "100vw", alignContent: "center"}}
+        >
+          {mode ? <h1>Test Ocean</h1> : <h1>Test Human</h1>}
+        </div>
+
       </>
     );
-  };
+};
 
-  export default PrincipalComp;
+export default PrincipalComp;
