@@ -17,7 +17,7 @@ const fishnetingCaptcha: React.FC = () => {
   // Chargement de l'image du filet
   useEffect(() => {
     const img = new window.Image();
-    img.src = "/src/assets/images/game-tcha/filet-dechet.png"; // Chemin relatif à partir du répertoire public
+    img.src = "../../assets/images/game-tcha/filet-dechet.png";
     img.onload = () => {
       fishnetImage.current = img;
       setImageLoaded(true);

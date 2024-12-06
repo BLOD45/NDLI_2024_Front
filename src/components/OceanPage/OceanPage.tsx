@@ -38,7 +38,7 @@ const OceanPage: React.FC = () => {
                     height: "100%",
                     width: "100%",
                     position: "relative",
-                    backgroundImage: "url('/src/assets/images/principal/test.jpg')",
+                    backgroundImage: "url('../../assets/images/principal/test.jpg')",
                     backgroundSize: "cover",
                     backgroundPosition: "center"
                 }}
