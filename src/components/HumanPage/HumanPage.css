@@ -58,8 +58,13 @@
 }
 
 .human-page .popup-column p {
-    font-size: 1.2rem; /* Agrandir le texte */
+    font-size: 1.2rem; /* Taille du texte */
     line-height: 1.6; /* Espacement entre les lignes */
+    background-color: rgb(40, 37, 37); /* Fond noir */
+    color: white; /* Texte blanc pour contraste */
+    padding: 20px; /* Espacement intérieur */
+    border-radius: 10px; /* Coins arrondis (facultatif) */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ombre pour un effet visuel */
 }
 
 .human-page img {
