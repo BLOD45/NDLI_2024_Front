@@ -16,8 +16,10 @@ const HumanPage: React.FC = () => {
             content = [texts["1"].homme, texts["1"].parallel];
         } else if (key === "2") {
             content = [texts["2"].homme, texts["2"].parallel];
-        } else if (key === "6") {
-            content = [texts["6"].ocean, texts["6"].parallel];
+        } else if (key === "3") {
+            content = [texts["3"].ocean, texts["3"].parallel];
+        } else if (key === "4") {
+            content = [texts["4"].ocean, texts["4"].parallel];
         }
 
         // Mise à jour du contenu du pop-up et affichage du pop-up
@@ -31,7 +33,8 @@ const HumanPage: React.FC = () => {
             <div style={{ display: "flex", flexDirection: "column", marginRight: "20px", width: "150px", textAlign: "center" }}>
                 <button onClick={() => handleButtonClick("1")}>1</button>
                 <button onClick={() => handleButtonClick("2")}>2</button>
-                <button onClick={() => handleButtonClick("6")}>6</button>
+                <button onClick={() => handleButtonClick("3")}>3</button>
+                <button onClick={() => handleButtonClick("4")}>4</button>
             </div>
 
             {/* Image principale, centrée et fixée à une taille de 400px */}
