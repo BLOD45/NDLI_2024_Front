@@ -21,7 +21,7 @@ function Cookie({ count, boolCookie, setCount, setBoolCookie }: CookieProps) {
             const clickerZone = clickerZoneRef.current
             const button = buttonRef.current
             const maxX = clickerZone.clientWidth - button.clientWidth 
-            const maxY = clickerZone.clientHeight - button.clientHeight - 20
+            const maxY = clickerZone.clientHeight - button.clientHeight - 50
             const randomX = Math.floor(Math.random() * maxX + 20)
             const randomY = Math.floor(Math.random() * maxY - 250)
             button.style.transform = `translate(${randomX}px, ${randomY}px)`
