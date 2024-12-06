@@ -1,41 +1,59 @@
 .container {
     display: flex;
-    height: 90vh;
-    width: 95vw;
-    margin: 0; /* Ensure no margin around the container */
-    padding: 0; /* Ensure no padding around the container */
-    transform: translateX(-15%); /* Move the container 90px to the left */
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: fill;
+    position: relative; /* Ensure the container is positioned relative for the video */
+    overflow: hidden; /* Hide any overflow */
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the video covers the entire background */
+    z-index: -1; /* Place the video behind other elements */
 }
 
 .shop {
-    background-color: #817c7c;
-    padding: 0; /* Remove padding to fill the space completely */
+    background-color: rgba(133, 126, 224, 0.726); /* Add some transparency */
+    padding: 1vw ;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    width: 20%; /* Ensure the shop takes up 20% of the width */
-    height: 100%; /* Ensure the shop fills the entire height */
+    justify-content: top; /* Center items vertically */
+    align-items: left; /* Center items horizontally */
+    width: 20%;
+    height: 100%;
+    z-index: 1; /* Ensure the shop is above the video */
 }
+
 
 .clicker-zone {
     position: relative;
-    background-color: #3f3030;
-    padding: 1rem;
+    background-color: rgba(43, 53, 197, 0.425); /* Add some transparency */
+    padding: 0;
     overflow: clip;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 95%; /* Ensure the clicker zone takes up 80% of the width */
+    align-items: center; /* Center items horizontally */
+    width: 80%;
+    height: auto;
+    z-index: 1; /* Ensure the clicker zone is above the video */
+    text-align: center; /* Center text */
 }
 
 .clicker-zone-click {
     position: relative;
-    background-color: #3f3030;
-    padding: 1rem;
+    padding: 0;
     overflow: clip;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100%; /* Ensure the clicker zone fills the entire height */
-    width: 95%; /* Ensure the clicker zone takes up 80% of the width */
+    height: 100%;
+    width: 100%;
+    z-index: 1; /* Ensure the clicker zone click is above the video */
 }
