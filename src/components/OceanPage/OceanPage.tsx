@@ -1,11 +1,24 @@
 import React, { useState } from 'react';
+import texts from '/src/assets/text/texts.json'; // Assurez-vous que le chemin est correct
 
 const OceanPage: React.FC = () => {
     const [popupVisible, setPopupVisible] = useState(false);
     const [popupContent, setPopupContent] = useState('');
 
-    const handleButtonClick = (content: string) => {
-        setPopupContent(content);
+    const handleButtonClick = (key: string) => {
+        let content: string[] = []; // Utilisez la clé pour accéder au texte de l'océan
+        
+        if (key === "1") {
+            content = [texts["1"].ocean, texts["1"].parallel];
+        } else if (key === "2") {
+            content = [texts["2"].ocean, texts["2"].parallel];
+        } else if (key === "3") {
+            content = [texts["3"].ocean, texts["3"].parallel];
+        } else if (key === "4") {
+            content = [texts["4"].ocean, texts["4"].parallel];
+        }
+
+        setPopupContent(content.map((text, index) => <p key={index}>{text}</p>));
         setPopupVisible(true);
     };
 
@@ -26,11 +39,11 @@ const OceanPage: React.FC = () => {
                     backgroundPosition: "center"
                 }}
             >
-                {/* Visible Buttons */}
+                {/* Marée */}
                 <button
                     style={{
                         position: "absolute",
-                        top: "20%",
+                        top: "7%",
                         left: "30%",
                         width: "50px",
                         height: "50px",
@@ -38,10 +51,11 @@ const OceanPage: React.FC = () => {
                         border: "none",
                         cursor: "pointer"
                     }}
-                    onClick={() => handleButtonClick('Popup Content 1')}
+                    onClick={() => handleButtonClick('2')}
                 >
-                    Button 1
                 </button>
+
+                {/* Acidification de l'océan */}
                 <button
                     style={{
                         position: "absolute",
@@ -53,10 +67,28 @@ const OceanPage: React.FC = () => {
                         border: "none",
                         cursor: "pointer"
                     }}
-                    onClick={() => handleButtonClick('Popup Content 2')}
+                    onClick={() => handleButtonClick('1')}
                 >
-                    Button 2
                 </button>
+
+                {/* Dorsales */}
+                <button
+                    style={{
+                        position: "absolute",
+                        top: "90%",
+                        left: "50%",
+                        width: "50px",
+                        height: "50px",
+                        backgroundColor: "rgba(0, 255, 0, 0.5)", // Semi-transparent green
+                        border: "none",
+                        cursor: "pointer"
+                    }}
+                    onClick={() => handleButtonClick('3')}
+                >  
+                </button>
+
+
+
 
                 {/* Popup */}
                 {popupVisible && (
@@ -69,7 +101,8 @@ const OceanPage: React.FC = () => {
                             padding: "20px",
                             backgroundColor: "white",
                             border: "1px solid black",
-                            zIndex: 1000
+                            zIndex: 1000,
+                            color: "black"
                         }}
                     >
                         <p>{popupContent}</p>
