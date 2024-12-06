@@ -135,7 +135,7 @@ const OceanPage: React.FC = () => {
                             left: "50%",
                             transform: "translate(-50%, -50%)",
                             padding: "20px",
-                            backgroundColor: "white",
+                            backgroundColor: "rgba(245,245,220)",
                             border: "1px solid black",
                             zIndex: 1000,
                             color: "black"

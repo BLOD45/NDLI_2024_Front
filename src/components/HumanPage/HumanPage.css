@@ -1,7 +1,10 @@
 .human-page {
     display: flex;
-    height: 100vh; /* Prend toute la hauteur de la fenêtre */
-    width: 100vw;  /* Prend toute la largeur de la fenêtre */
+    height: 100%; /* Prend toute la hauteur de la fenêtre */
+    width: 100%;  /* Prend toute la largeur de la fenêtre */
+    background-image: url('/src/assets/images/principal/plage.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 .human-page .buttons-column {
