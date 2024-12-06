@@ -6,6 +6,8 @@ import blood from "../../assets/images/human/blood.png";
 import bone from "../../assets/images/human/bone.png";
 import heart from "../../assets/images/human/heart.png";
 import stomach from "../../assets/images/human/stomach.png";
+import lung from "../../assets/images/human/lungs.png";
+import skin from "../../assets/images/human/skin.png";
 import "./HumanPage.css";
 
 const HumanPage: React.FC = () => {
@@ -25,6 +27,10 @@ const HumanPage: React.FC = () => {
             content = [texts["3"].homme, texts["3"].parallel];
         } else if (key === "4") {
             content = [texts["4"].homme, texts["4"].parallel];
+        } else if (key === "5") {
+            content = [texts["5"].homme, texts["5"].parallel];
+        } else if (key === "6") {
+            content = [texts["6"].homme, texts["6"].parallel];
         }
 
         // Mise à jour du contenu du pop-up et affichage du pop-up
@@ -47,6 +53,12 @@ const HumanPage: React.FC = () => {
                 </button>
                 <button onClick={() => handleButtonClick("4")}>
                     <img src={blood} alt="blood" style={{ width: "50px", height: "50px" }} />
+                </button>
+                <button onClick={() => handleButtonClick("5")}>
+                    <img src={lung} alt="lung" style={{ width: "50px", height: "50px" }} />
+                </button>
+                <button onClick={() => handleButtonClick("6")}>
+                    <img src={skin} alt="skin" style={{ width: "50px", height: "50px" }} />
                 </button>
             </div>
 
