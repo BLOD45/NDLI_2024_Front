@@ -1,0 +1,73 @@
+.human-page {
+    display: flex;
+    height: 100%; /* Prend toute la hauteur de la fenêtre */
+    width: 100%;  /* Prend toute la largeur de la fenêtre */
+    background-image: url('/src/assets/images/principal/plage.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.human-page .buttons-column {
+    flex: 1; /* 33% de la largeur */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrer les boutons verticalement */
+    align-items: center; /* Centrer les boutons horizontalement */
+    padding: 20px;
+}
+
+.human-page .buttons-column button {
+    width: 100px; /* Largeur des boutons */
+    height: 100px; /* Hauteur des boutons */
+    margin-bottom: 20px; /* Espacement vertical entre les boutons */
+    border: 2px solid black; /* Bordure des boutons */
+    border-radius: 10px; /* Coins arrondis */
+    display: flex;
+    justify-content: center; /* Centrer les images horizontalement */
+    align-items: center; /* Centrer les images verticalement */
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s; /* Animation pour hover */
+}
+
+.human-page .buttons-column button:hover {
+    transform: scale(1.1); /* Agrandir légèrement au survol */
+    background-color: #e0e0e0; /* Modifier la couleur de fond au survol */
+}
+
+.human-page .buttons-column button img {
+    width: 80px; /* Augmenter la taille de l'image du bouton */
+    height: 80px;
+    transition: transform 0.2s; /* Animation pour un effet visuel */
+}
+
+.human-page .image-column {
+    flex: 1; /* 33% de la largeur */
+    display: flex;
+    justify-content: center; /* Centrer l'image horizontalement */
+    align-items: center; /* Centrer l'image verticalement */
+}
+
+.human-page .popup-column {
+    flex: 1; /* 33% de la largeur */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrer le texte verticalement */
+    padding: 20px;
+    overflow-y: auto; /* Barre de défilement si le texte dépasse */
+    text-align: justify; /* Texte justifié */
+}
+
+.human-page .popup-column p {
+    font-size: 1.2rem; /* Taille du texte */
+    line-height: 1.6; /* Espacement entre les lignes */
+    background-color: rgb(40, 37, 37); /* Fond noir */
+    color: white; /* Texte blanc pour contraste */
+    padding: 20px; /* Espacement intérieur */
+    border-radius: 10px; /* Coins arrondis (facultatif) */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ombre pour un effet visuel */
+}
+
+.human-page img {
+    max-width: 100%; /* L'image occupe toute la largeur possible */
+    height: 90%; /* Préserver les proportions */
+}
