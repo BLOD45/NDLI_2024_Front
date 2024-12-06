@@ -13,6 +13,30 @@
     padding: 20px;
 }
 
+.human-page .buttons-column button {
+    width: 100px; /* Largeur des boutons */
+    height: 100px; /* Hauteur des boutons */
+    margin-bottom: 20px; /* Espacement vertical entre les boutons */
+    border: 2px solid black; /* Bordure des boutons */
+    border-radius: 10px; /* Coins arrondis */
+    display: flex;
+    justify-content: center; /* Centrer les images horizontalement */
+    align-items: center; /* Centrer les images verticalement */
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s; /* Animation pour hover */
+}
+
+.human-page .buttons-column button:hover {
+    transform: scale(1.1); /* Agrandir légèrement au survol */
+    background-color: #e0e0e0; /* Modifier la couleur de fond au survol */
+}
+
+.human-page .buttons-column button img {
+    width: 80px; /* Augmenter la taille de l'image du bouton */
+    height: 80px;
+    transition: transform 0.2s; /* Animation pour un effet visuel */
+}
+
 .human-page .image-column {
     flex: 1; /* 33% de la largeur */
     display: flex;
