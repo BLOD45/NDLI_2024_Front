@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Stage, Layer, Line, Image, Rect } from "react-konva";
 import { useNavigate } from "react-router-dom";
 import oceanVideo from '../../assets/videos/background/bubbles.mp4';
+import filet from '../../assets/images/game-tcha/filet-dechet.png';
 
 const fishnetingCaptcha: React.FC = () => {
   const maxScroll = 400;
@@ -17,7 +18,7 @@ const fishnetingCaptcha: React.FC = () => {
   // Chargement de l'image du filet
   useEffect(() => {
     const img = new window.Image();
-    img.src = "../../assets/images/game-tcha/filet-dechet.png";
+    img.src = filet;
     img.onload = () => {
       fishnetImage.current = img;
       setImageLoaded(true);

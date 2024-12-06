@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import texts from '../../assets/text/texts.json';
+import oceanBackground from '../../assets/images/principal/test.jpg';
 
 const OceanPage: React.FC = () => {
     const [popupVisible, setPopupVisible] = useState(false);
@@ -38,7 +39,7 @@ const OceanPage: React.FC = () => {
                     height: "100%",
                     width: "100%",
                     position: "relative",
-                    backgroundImage: "url('../../assets/images/principal/test.jpg')",
+                    backgroundImage: `url(${oceanBackground})`,
                     backgroundSize: "cover",
                     backgroundPosition: "center"
                 }}
