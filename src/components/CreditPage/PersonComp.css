@@ -1,0 +1,24 @@
+.person-comp{
+    margin: 2em;
+    aspect-ratio: 1 / 1;
+
+}
+
+.name {
+    text-align: center;
+
+    margin-top: 1em;
+}
+
+.is-error{
+    display: inline-block; /* Permet un meilleur contrôle sur l'espacement */
+    white-space: normal; /* Permet au texte de revenir à la ligne naturellement */
+    word-wrap: break-word; /* Forcer les retours à la ligne pour les mots longs */
+    overflow-wrap: break-word; /* Support des navigateurs modernes */
+    word-break: break-word;
+}
+
+.note {
+    margin-top: auto;
+    margin-bottom: auto;
+}

@@ -10,15 +10,15 @@ interface PersonCompProps {
 
 function PersonComp({ name, image, role }: PersonCompProps) {
     return (
-        <div className="person-comp nes-container is-rounded">
+        <div className="is-dark person-comp nes-container is-rounded">
             <div className="profile-pic-container nes-container is-rounded">
                 <img src={image}/>
             </div>
-            <div className="nes-badge">
+            <div className="nes-badge note">
                 <span className="is-error">{role}</span>
             </div>
 
-            <p className="nes-text is-success"> &lt;{name}&gt; </p>
+            <p className="name nes-text is-success"> &lt;{name}&gt; </p>
         </div>
     );
 }

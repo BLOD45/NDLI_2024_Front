@@ -1,21 +1,79 @@
-.page-credits {
-  background: linear-gradient(to bottom, #1a1a2e, #16213e); /* Dégradé sombre */
-  color: #ffffff;
-  font-family: 'Press Start 2P', cursive; /* Typographie rétro */
-  text-align: center;
-  min-height: 100vh;
-  padding: 20px;
-  position: relative;
-  overflow: hidden;
+/* CreditsPage.css */
+#root {
+    height: 100vh;
+    background-image: url('/src/assets/images/backgrounds/credits.png'); 
+    width: 100vw;
+    background-size: cover; /* L'image couvre toute la surface sans déformation */
+    background-position: center center; /* Centrer l'image horizontalement et verticalement */
+    background-attachment: fixed; /* L'image de fond reste fixe lors du défilement */
+    background-repeat: no-repeat;   
+    object-fit: cover;
 }
 
-.credits-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 membres par ligne sur grand écran */
-  gap: 20px;
-  justify-content: center;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
-  grid-template-rows: auto; /* Ajuste la hauteur des lignes */
+.page-credit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Assure que l'élément occupe toute la hauteur */
+    padding: 20px;
+    background-size: cover; /* L'image couvre toute la surface */
+    background-position: center; /* Centrer l'image */
+    background-repeat: no-repeat; /* Empêcher la répétition de l'image */
+    background-attachment: fixed; /* Fixe l'image de fond lorsque l'utilisateur fait défiler */
+   
+}
+
+h1 {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.credit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Réactif à la taille de l'écran */
+    row-gap: 10%;
+    column-gap: 5%;
+    max-width: 80vw;
+    margin-right: auto;
+    max-height: 80vh;
+    margin-left: auto;
+    margin-top: 2.5em;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.credit-grid .credit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fond semi-transparent */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.credit-grid .credit:hover {
+    transform: translateY(-5px);
+}
+
+.credit-grid img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.credit-grid .credit h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.credit-grid .credit p {
+    font-size: 1rem;
+    color: #777;
 }

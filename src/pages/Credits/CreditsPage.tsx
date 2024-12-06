@@ -2,63 +2,77 @@ import React from "react";
 import Credit from "../../components/CreditPage/PersonComp";
 import "./CreditsPage.css"
 
+// Importation des images directement
+import archiImage from "../../assets/images/PP/archi.png";
+import cerzenImage from "../../assets/images/PP/cerzen.png";
+import colibryImage from "../../assets/images/PP/colibry.png";
+import cyrersImage from "../../assets/images/PP/cyrers.png";
+import dryloxxImage from "../../assets/images/PP/dryloxx.png";
+import fyneImage from "../../assets/images/PP/fyne.png";
+import hypoImage from "../../assets/images/PP/hypo.png";
+import kazenoImage from "../../assets/images/PP/kazeno.png";
+import ombruImage from "../../assets/images/PP/ombru.png";
+import zephImage from "../../assets/images/PP/zeph.png";
+
 const CreditPage = () => {
     const members = [
         {
             name: "Archi",
-            image: "../../assets/images/PP/archi.png",
-            role: "tmp"
+            image: archiImage,  
+            role: "défi national / design / gestion globale"
         },
         {
             name: "Cerzen",
-            image: "../../assets/images/PP/cerzen.png",
-            role: "tmp"
+            image: cerzenImage,
+            role: "page de credit / recherches / jingle"
         },
         {
             name: "Colibry",
-            image: "../../assets/images/PP/colibry.png",
-            role: "tmp"
+            image: colibryImage,
+            role: "présent"
         },
         {
             name: "Cyrers",
-            image: "../../assets/images/PP/cyrers.png",
-            role: "tmp"
+            image: cyrersImage,
+            role: "cookie cauchemard"
         },
         {
             name: "DryloXx",
-            image: "../../assets/images/PP/dryloxx.png",
-            role: "tmp"
+            image: dryloxxImage,
+            role: "gestion globale / defis national"
         },
         {
             name: "Fyne",
-            image: "../../assets/images/PP/fyne.png",
-            role: "tmp"
+            image: fyneImage,
+            role: "recherches / défi national"
         },
         {
             name: "Hypo",
-            image: "../../assets/images/PP/hypo.png",
-            role: "tmp"
+            image: hypoImage,
+            role: "gametcha / défi national"
         },
         {
             name: "Kazeno",
-            image: "../../assets/images/PP/kazeno.png",
-            role: "tmp"
+            image: kazenoImage,
+            role: "page de crédit / recherches / jingle"
         },
         {
             name: "Ombrustou",
-            image: "../../assets/images/PP/ombru.png",
-            role: "tmp"
+            image: ombruImage,
+            role: "cookie cauchemard"
         },
         {
             name: "Zeph",
-            image: "../../assets/images/PP/zeph.png",
-            role: "tmp"
+            image: zephImage,
+            role: "recherches"
         },
     ];
 
     return( 
         <div className="page-credit">
-            <h1> Page de crédit </h1>
+            <span className="nes-text is-disabled">
+                <h1>Page de crédit</h1>
+            </span>
             <div className="credit-grid">
                 {members.map((member, index) => (
                     <Credit
@@ -69,7 +83,7 @@ const CreditPage = () => {
                     />
                 ))}
             </div>
-        </div>
+        </div>        
     )
 }
 
