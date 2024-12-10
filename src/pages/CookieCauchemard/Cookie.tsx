@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { SetStateAction, useState } from 'react';
 import Cookie from '../../components/CookieCauchemard/CookieComponent.tsx';
 import CookieShop from '../../components/CookieCauchemard/CookieShop.tsx';
 import bubblesVideo from '../../assets/videos/background/bubbles.mp4';
@@ -9,6 +9,7 @@ function CauchemardCookieBasicCount() {
     const [boolCookie, setBoolCookie] = useState(false);
     const [varTemp, setVarTemp] = useState(1);
     const [randomMultiplier, setRandomMultiplier] = useState(1);
+    const [helpers, setHelpers] = useState(0);
 
     return (
         <div className="container">
@@ -16,10 +17,10 @@ function CauchemardCookieBasicCount() {
                 <source src={bubblesVideo} type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
-            <CookieShop count={count} setCount={setCount} boolCookie={boolCookie} varTemp={varTemp} setVarTemp={setVarTemp} randomMultiplier={randomMultiplier} setRandomMultiplier={setRandomMultiplier}/>
+            <CookieShop count={count} setCount={setCount} boolCookie={boolCookie} varTemp={varTemp} setVarTemp={setVarTemp} randomMultiplier={randomMultiplier} setRandomMultiplier={setRandomMultiplier} helpers={helpers} setHelpers={setHelpers}/>
             <div className="clicker-zone">
                 <h1>Cauchemard Cookie</h1>
-                <Cookie count={count} boolCookie={boolCookie} setCount={setCount} setBoolCookie={setBoolCookie} randomMultiplier={randomMultiplier} />
+                <Cookie count={count} boolCookie={boolCookie} setCount={setCount} setBoolCookie={setBoolCookie} randomMultiplier={randomMultiplier} helpers={helpers} />
             </div>
         </div>
     );

@@ -9,9 +9,11 @@ interface CookieShopProps {
     setVarTemp: React.Dispatch<React.SetStateAction<number>>;
     randomMultiplier: number;
     setRandomMultiplier: React.Dispatch<React.SetStateAction<number>>;
+    helpers: number;
+    setHelpers: React.Dispatch<React.SetStateAction<number>>;
 }
 
-function CookieShop({ count, setCount, boolCookie, varTemp, setVarTemp, randomMultiplier, setRandomMultiplier }: CookieShopProps) {
+function CookieShop({ count, setCount, boolCookie, varTemp, setVarTemp, randomMultiplier, setRandomMultiplier, helpers, setHelpers }: CookieShopProps) {
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -29,6 +31,13 @@ function CookieShop({ count, setCount, boolCookie, varTemp, setVarTemp, randomMu
         }
     };
 
+    const handleBuyHelpers = ()=>{
+        if(count >= helpers ** 2){
+            setHelpers(helpers+1)
+            setCount(Math.round(count - helpers ** 2));
+        }
+    }
+
     return (
         <div className="shop">
             <h1>Shop</h1>
@@ -38,6 +47,11 @@ function CookieShop({ count, setCount, boolCookie, varTemp, setVarTemp, randomMu
                 <p className="left-align">Random Multiplier: {randomMultiplier.toFixed(2)}</p>
                 <button onClick={handleButtonClick} disabled={count < varTemp ** 2}>
                     Increment VarTemp
+                </button>
+                <br />
+                <br />
+                <button onClick={handleBuyHelpers} disabled={count < helpers ** 2}>
+                    Buy Helper
                 </button>
             </div>
         </div>
